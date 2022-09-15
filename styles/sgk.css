@@ -1,8 +1,10 @@
 main {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	align-items: baseline;
-	gap: 50px;
+	display: flex;
+	/* grid-template-columns: 1fr 1fr 1fr; */
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
 }
 
 main > div {
@@ -11,6 +13,7 @@ main > div {
 	align-items: center;
 	justify-content: center;
 	padding: 30px 20px;
+	width: 359.656px;
 }
 
 i {
@@ -25,9 +28,4 @@ main div div {
 main div div.show {
 	display: flex;
 	column-gap: 50px;
-}
-
-main a {
-	text-decoration: none;
-	cursor: pointer;
 }

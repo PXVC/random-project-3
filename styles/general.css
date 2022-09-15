@@ -5,49 +5,184 @@
 	font-family: sans-serif;
 }
 
+body {
+	background-color: #e2e2e2;
+	overflow-y: scroll;
+}
+
+main > div {
+	background-color: #fff;
+	box-shadow: 5px 5px #4e4e4e15;
+}
+
+.btn {
+	margin-top: 10px;
+	font-size: 13px;
+	font-weight: 600;
+	padding: 8px 16px;
+	min-width: 150px;
+	border-radius: 3px;
+	text-align: center;
+	transition: all 0.2s ease;
+}
+
+.btn-primary {
+	background-color: var(--primary);
+	border: 3px solid var(--primary);
+	color: #fff;
+}
+
+.btn-primary:hover {
+	background-color: var(--secondary);
+	border-color: var(--secondary);
+}
+
+.btn-secondary {
+	background-color: #fff;
+	color: var(--primary);
+	border: 3px solid var(--primary);
+}
+
+.btn-secondary:hover {
+	background-color: var(--primary);
+	color: #fff;
+}
+
 nav {
 	display: flex;
 	align-items: center;
-	padding: 20px 40px;
+	justify-content: space-between;
+	position: relative;
+	padding: 0 80px 0 40px;
+	height: 100px;
+	margin-bottom: 50px;
+	background-color: var(--nav);
+	transition: background-color 0.2s ease;
 }
 
 nav img {
 	margin-right: 70px;
 }
 
+a {
+	text-decoration: none;
+	font-weight: 600;
+}
+
 nav ul {
 	display: flex;
 	list-style-type: none;
-	column-gap: 50px;
+	column-gap: 30px;
 	font-size: 23px;
 	cursor: pointer;
 }
 
 nav ul li {
 	position: relative;
-	padding: 0 10px;
-	color: #000;
-	transition: color 0.25s ease-in-out;
-}
-nav ul li.active,
-nav ul li:hover,
-a {
-	color: rgb(106, 115, 202);
+	border-radius: 3px;
+	padding: 5px 20px;
+	color: #fff;
 }
 
-nav ul li:after {
-	content: "";
-	height: 4px;
-	width: 0;
-	background-color: currentColor;
+nav ul li.active,
+nav ul li:hover {
+	background-color: #fff;
+	color: var(--nav);
+}
+
+.fa {
+	color: #fff;
+	font-size: 30px;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 3px;
+	cursor: pointer;
+	z-index: 2;
+	transition: all 0.2s ease-in-out;
+}
+
+.fa:hover {
+	background-color: #fff;
+	color: var(--nav);
+}
+
+.fa-cart-shopping div {
 	position: absolute;
-	bottom: -3px;
 	left: 50%;
 	transform: translateX(-50%);
-	transition: width 0.25s ease-in-out;
+	background-color: #fff;
+	color: #000;
 }
 
-nav ul li.active:after,
-nav ul li:hover:after {
-	width: 100%;
+.fa-xmark {
+	position: absolute;
+	z-index: 2;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+}
+
+.lightbox-bg {
+	position: fixed;
+	z-index: 9;
+	display: none;
+}
+
+.lightbox {
+	position: fixed;
+	z-index: 99;
+	display: none;
+}
+
+:is(.lightbox-bg, .lightbox).show {
+	display: block;
+}
+
+.lightbox-bg {
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #00000091;
+}
+
+.cart {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	padding: 20px;
+	width: 70vw;
+	max-height: 546.516px;
+	overflow-y: scroll;
+}
+
+.cart::after {
+	content: "Ko có j trong giỏ hàng cả ._.";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.cart-row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	border-bottom: 1px solid #000;
+	position: relative;
+	z-index: 1;
+	background-color: #fff;
+}
+
+.cart-preview-image {
+	width: 13%;
+	margin-right: 30px;
+}
+
+.cart-row div {
+	margin-right: auto;
 }
