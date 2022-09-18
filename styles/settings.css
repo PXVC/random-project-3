@@ -1,0 +1,18 @@
+.setting.bg {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 20px;
+}
+
+[data-bgcolor] {
+	padding: 5px;
+	width: 23%;
+	cursor: pointer;
+	outline: 3px solid #fff;
+	transition: outline-color 0.2s ease;
+}
+
+[data-bgcolor].active {
+	outline-color: var(--nav);
+}

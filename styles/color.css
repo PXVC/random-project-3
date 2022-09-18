@@ -1,0 +1,27 @@
+body[data-body-color="default"] {
+	--nav: #4c5df7;
+	--primary: #4c5df7;
+	--secondary: #091bc0;
+	--text: #3d4abb;
+}
+
+body[data-body-color="red"] {
+	--nav: #f74d4d;
+	--primary: #f74d4d;
+	--secondary: #c00909;
+	--text: #bb3d3d;
+}
+
+body[data-body-color="purple"] {
+	--nav: #874df7;
+	--primary: #874df7;
+	--secondary: #6809c0;
+	--text: #893dbb;
+}
+
+body[data-body-color="cyan-orange"] {
+	--nav: #47bdfc;
+	--primary: #ff820e;
+	--secondary: #c5650c;
+	--text: #267dac;
+}

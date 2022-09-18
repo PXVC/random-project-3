@@ -1,0 +1,103 @@
+.product {
+	width: 93vw;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+
+.product :is(.name, .body) i {
+	cursor: pointer;
+	color: var(--primary);
+	font-size: 20px;
+	transition: all 0.2s ease-in-out;
+}
+
+.product :is(.name, .body) i:hover {
+	color: #2231b9;
+}
+
+.product :is(.name, .body) h2 {
+	color: var(--text);
+}
+
+.product .name {
+	display: flex;
+	justify-content: space-between;
+	padding: 30px;
+	cursor: pointer;
+	color: var(--primary);
+}
+
+.product .name i.active {
+	transform: rotateX(180deg);
+	height: min-content;
+}
+
+.product .name h1 {
+	font-weight: 500;
+}
+
+.body {
+	display: none;
+	column-gap: 30vw;
+	padding: 50px;
+	border-top: 3px solid #000;
+}
+
+.body.show {
+	display: flex;
+}
+
+.product .body > div > * {
+	margin-bottom: 40px;
+}
+
+.product .body > div {
+	position: relative;
+}
+
+.product .body > div span {
+	position: absolute;
+	right: 110%;
+	width: max-content;
+	color: rgb(150, 150, 150);
+}
+
+.product .body h2 {
+	font-size: 47px;
+}
+
+.product .body img {
+	width: 300px;
+	user-select: none;
+}
+
+.product .quantity-group {
+	display: flex;
+	align-items: center;
+	user-select: none;
+}
+
+.product .quantity-group input {
+	width: 70px;
+	padding: 5px 0;
+	margin-inline: 20px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.product .quantity-group input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.product .body h2,
+.product .body .btn-group {
+	transform: translateX(-30%);
+}
+
+.product .body .btn {
+	font-size: 20px;
+	margin-right: 10px;
+	cursor: pointer;
+}

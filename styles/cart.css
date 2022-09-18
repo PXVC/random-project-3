@@ -1,0 +1,45 @@
+.cart {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	padding: 20px;
+	width: 70vw;
+	height: 546.516px;
+	overflow-y: scroll;
+}
+
+.cart-row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	border-bottom: 1px solid #000;
+	margin-top: 50px;
+	position: relative;
+	z-index: 1;
+	background-color: #fff;
+}
+
+.cart-preview-image {
+	width: 13%;
+	margin-right: 30px;
+}
+
+.cart-row div {
+	margin-right: auto;
+}
+
+.fa-xmark {
+	position: absolute;
+	z-index: 2;
+	right: 20px;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.btn-purchase-all {
+	position: absolute;
+	z-index: 2;
+	transform-origin: left; /* NOTE: cho ko lech65 vị trí */
+}
