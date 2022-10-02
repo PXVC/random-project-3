@@ -17,6 +17,11 @@ let backgrounds = document.querySelectorAll(".bg img");
 
 let lightboxBackground = document.querySelector(".lightbox-bg");
 
+body.setAttribute(
+	"data-body-color",
+	localStorage.getItem("background color") || "default"
+);
+
 dropdowns.forEach((dropdown) => {
 	dropdown.addEventListener("click", (e) => {
 		e.preventDefault();
@@ -102,8 +107,3 @@ function removeAllItem() {
 function removeItem(e) {
 	e.target.parentElement.remove();
 }
-
-body.setAttribute(
-	"data-body-color",
-	localStorage.getItem("background color") || "default"
-);
